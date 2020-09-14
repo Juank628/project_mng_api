@@ -38,4 +38,9 @@ app.post("/punchlist/add", async (req, res) => {
   res.json({ id: doc.id });
 });
 
+app.post("/punchlist/add/files", async (req, res) => {
+  console.log(typeof(req.body))
+  res.json({status: "ok"})
+})
+
 exports.app = functions.https.onRequest(app);
